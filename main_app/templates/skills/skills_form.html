@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<h4>Add a new skill</h4>
+    <form method="POST">
+        {% csrf_token%}
+        <table>
+            {{ form.as_table}}
+        </table>
+        <input type="text" btn="blue btn" value="">
+    </form>
+    <script>
+        var selectEl = document.getElementById('id_skill_level');
+        M.FormSelect.init(selectEl);
+    </script>
+{% endblock %}
